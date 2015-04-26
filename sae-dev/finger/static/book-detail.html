@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html><head>
+<meta charset="UTF-8">
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<script type="text/javascript" src="/static/js/jquery-1.8.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/default2.css">
+<title>指尖南信</title>
+</head>
+<script type="text/javascript">
+	var marc_no = ''
+	var url=window.location.toString();
+    var str="";
+    if(url.indexOf("?")!=-1){
+        var ary=url.split("?")[1].split("&");
+        for(var i in ary){
+            str=ary[i].split("=")[0];
+            if (str == "marc_no") {
+                marc_no = decodeURI(ary[i].split("=")[1]);
+            }
+        }
+    }
+	$.get('/api/v1/campus/book-detail/'+marc_no, 
+		function(res){
+			dt = res.dt;
+			dd = res.dd;
+			address = res.address;
+			flag = res.flag;
+			console.log(res);
+
+			html1 = ''
+
+			$.each(dt, function(i,e){
+				html1+= '<p><span id='+i+' style="font-size:16px;color:#AFA7A7;">'+e+'&nbsp&nbsp</span><span class="'+i+'">'+dd[i]+'</span></p>'
+			})
+			$.each(address, function(i,e){
+				html1+= '<p><span>馆藏信息:&nbsp&nbsp</span><span>'+e[1]+'</span>&nbsp&nbsp<span>'+flag[i]+'<span></p>'
+				console.log(html1);
+			})
+
+			$(".detail").html(html1);
+			$('a').removeAttr('href');
+
+
+	})
+</script>
+
+<body>
+<div>
+<img style="width:100%" src="http://chaoran.u.qiniudn.com/library1.png?imageView2/2/w/480/h/400">
+</div>
+<div class="detail">
+	<p style="margin-top:20px;">正在加载...</p>
+
+<!-- 	<p><span id='1' style="font-size:16px;color:#AFA7A7;">题名/责任者:&nbsp&nbsp</span><span class="1"></span></p>
+	<p><span style="font-size:16px;color:#AFA7A7;">出版发行项:&nbsp&nbsp</span><span class='2'></span></p>
+	<p><span style="font-size:16px;color:#AFA7A7;">ISBN及定价:&nbsp&nbsp</span><span class='3'></span></p>
+	<p><span style="font-size:16px;color:#AFA7A7;">载体形态项:&nbsp&nbsp</span><span class="4"></span></p>
+	<p><span style="font-size:16px;color:#AFA7A7;">个人责任者:&nbsp&nbsp</span><span class="5"></span></p>
+	<p><span style="font-size:16px;color:#AFA7A7;">学科主题:&nbsp&nbsp</span><span class="6"></span></p>
+	<p><span style="font-size:16px;color:#AFA7A7;">中图法分类号:&nbsp&nbsp</span><span class="7"></span></p>
+	<p><span style="font-size:16px;color:#AFA7A7;">书目附注:&nbsp&nbsp</span><span class="8"></span></p>
+	<p><span style="font-size:16px;color:#AFA7A7;">提要文摘附注:&nbsp&nbsp</span><span class="9"></span></p>
+	<hr> -->
+	
+</div>
+
+	
+	
+
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<meta charset="utf-8">
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/static/mobile/global/logo.png">
+<meta name="description" content="团购,每日推荐最优质、省钱、放心的团购商品。团购——最权威的团购导航。">
+<meta name="keywords" content="团购网站大全,团购网站,团购导航,团购大全">
+<title>指尖南信</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html><head>
+<meta charset="UTF-8">
+<title>指尖南信</title>
+</head>
+<div class="wrap">
+<div class="cloudcenter">
+<!-- <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script> -->
+<link rel="stylesheet" type="text/css" href="/static/default2.css">
+<script type="text/javascript" src="/static/js/jquery-1.8.2.min.js"></script>
+<script>
+	var url=window.location.toString();
+    var str="";
+    if(url.indexOf("?")!=-1){
+        var ary=url.split("?")[1].split("&");
+        for(var i in ary){
+            str=ary[i].split("=")[0];
+            if (str == "id") {
+                id = decodeURI(ary[i].split("=")[1]);
+                renderWorkDetail(id);
+            }
+        }
+    }
+
+    function renderWorkDetail(id){
+    	$.get('/api/v1/work/work/'+id+'/',
+    		function(res){
+    			console.log(res);
+    			$('.work .name').html(res.name);
+    			$('.work .company_name').html(res.company_name);
+    			$('.work .number').html(res.number);
+    			$('.work .expire_time').html(res.expire_time);
+    			$('.work .price').html(res.price);
+    			$('.work .area').html(res.area);
+    			$('.work .phone').html(res.phone);
+    			$('.work .content').html(res.content);
+    			$('#submit').click(function(){
+    				applyWork(id);
+    			})
+    		}
+
+    	)
+    }
+
+    function applyWork(id){
+    	var apply_phone = $('#apply_phone').val();
+    	var apply_name = $('#apply_name').val();
+    	if(apply_name==''){
+    		$('.error').html("* 名字不能为空")
+    	}
+    	if(apply_phone==''){
+    		$('.error').html("* 电话不能为空")
+    	}
+    	data ={
+    		'work': id,
+    		'phone': apply_phone,
+    		'name': apply_name
+    	}
+
+    	$.post('/api/v1/work/applywork/',
+    			data,
+    			function(res){
+    				console.log(res);
+    				$('.error').html("感谢你的申请，我们会尽快回复你.")
+    			}
+    		)
+    }
+</script>
+<body>
+	<div id="page" style="position:relative">
+	<div class="work" style="margin-left:30px;">
+		<h2 class="name">派单员</h2>
+		<div><span style="font-size:18px;font:bold;" >公司名称:</span>
+			<span style="margin-left:32px;size:10px;" class="company_name"></span>
+		</div>
+		<br/>
+		<div><span style="font-size:18px;font:bold;">招聘人数:</span>
+			<span style="margin-left:32px;size:10px;" class="number" ></span>
+		</div>
+		</br>
+		<div><span style="font-size:18px;font:bold;">有效期:</span>
+			<span style="margin-left:32px;size:10px;" class="expire_time"></span>
+		</div>
+		<br>
+		<div><span style="font-size:18px;font:bold;">薪资水平:</span>
+			<span style="margin-left:32px;size:10px;" class="price"></span>
+		</div>
+		<br>
+		<div><span style="font-size:18px;font:bold;">工作区域:</span>
+			<span style="margin-left:32px;size:10px;" class="area"></span>
+		</div>
+		</br>
+		<div><span style="font-size:18px;font:bold;">详细:</span>
+			<span style="margin-left:32px;size:10px;" class="content"></span>
+		</div>
+		
+		</br>
+		<div><span style="font-size:18px;font:bold;">联系电话:</span>
+			<span style="margin-left:32px;size:10px;" class="phone"></span>
+		</div>
+		<br/>
+		<div>
+			<p>姓名: </p><input type="text"/ id="apply_name">
+			<p>电话: </p><input type="text"/ id="apply_phone">
+			<div class="error" style="color:#F16F18"></div>
+
+			<input type="button" name="car_num" id="submit" class="the_form_submit"style="margin-top:10px;" value="申请" />
+         <ul class="reg-list-2col row"><li></li></ul> 
+     	</div>
+	</div>
+	</div>
+	
+</body>
+
+<footer>
+
+</footer>	
+
+</body>
+</html

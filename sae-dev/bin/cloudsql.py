@@ -1,0 +1,5 @@
+#!/Users/zcr/code/sae-dev/bin/python
+# EASY-INSTALL-SCRIPT: 'sae-python-dev==1.3.2','cloudsql.py'
+__requires__ = 'sae-python-dev==1.3.2'
+import pkg_resources
+pkg_resources.run_script('sae-python-dev==1.3.2', 'cloudsql.py')

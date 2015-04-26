@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0052)http://wap.weixiaoxin.cn/AllShow/cateshow/?wid=12879 -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>指尖南信</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<!--<base target="http://wap.weixiaoxin.cn/">--><base href="." target="http://wap.weixiaoxin.cn/">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="format-detection" content="telephone=no">
+<meta charset="utf-8">
+<link type="text/css" rel="stylesheet" href="./css/index.css" />
+<style>
+
+</style>
+<!-- <script src="./plugin/iscroll.js" type="text/javascript"></script> -->
+<link href="./css/slideshow_buttontitle.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+<script src="./js/slideshow_buttontitle.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+  function init(){
+
+                (function(a){
+                  a.fn.slideshow_buttontitle=function(p){
+                      var p=p||{};
+
+                      var m=p&&p.time_interval?p.time_interval:"500";
+                      var n=p&&p.window_background_color?p.window_background_color:"white";
+                      var o=p&&p.window_padding?p.window_padding:"5";
+                      var q=p&&p.window_width?p.window_width:"400";
+                      var r=p&&p.window_height?p.window_height:"400";
+                      var s=p&&p.border_size?p.border_size:"1";
+                      var t=p&&p.border_color?p.border_color:"black";
+                      var u=p&&p.title_text_color?p.title_text_color:"red";
+                      var v=p&&p.title_background_color?p.title_background_color:"black";
+                      var w=p&&p.button_color?p.button_color:"blue";
+                      var x=p&&p.button_current_color?p.button_current_color:"white";
+                      var y=p&&p.button_size?p.button_size:"8";
+                      o += "px";
+                      q += "px";
+                      r += "px";
+                      s += "px";
+                      y += "px";
+
+                      var z;
+                      var A=0;
+                      var B=a(this);
+                      var C=B.find("ul:first").children("li").length;
+                      if(B.find("ul").length==0||B.find("li").length==0){
+                          B.append("Require content");
+                          return null
+                          }
+                          B.find("ul:first").children("li").children("a").children("img").css("width",q).css("height",r);
+                      s_s_ul(B.find("ul:first"),o,q,r,s,t,n);
+                      s_s_n(B.find(".slideshow_simple1_nav"),w,y);
+                      s_s_t(B.find(".slideshow_simple1_title"),u,v,q,r,o,s);
+                      B.find("ul:first").children("li").hide();
+                      play();
+                      B.find(".slideshow_simple1_nav").children("li").hover(function(){
+                          stop($(this))
+                          });
+                      B.hover(
+                          function(){
+
+                          },
+                          function(){
+                              play();
+                          }
+                      );
+                      function play(){
+                          clearTimeout(z);
+                          B.find("ul:first").children("li").fadeOut();
+                          B.find("ul:first").children("li").eq(A).fadeIn();
+                          B.find(".slideshow_simple1_nav").children("li").css("background-color",w);
+                          B.find(".slideshow_simple1_nav").children("li").eq(A).css("background-color",x);
+                          B.find(".slideshow_simple1_title").text(B.find("ul:first").children("li").children("a").eq(A).attr("title"));
+                          if(B.find("ul:first").children("li").children("a").eq(A).attr("title")==""||B.find("ul:first").children("li").children("a").eq(A).attr("title")==undefined){
+                              B.find(".slideshow_simple1_title").hide()
+                              }else{
+                              B.find(".slideshow_simple1_title").show()
+                              }
+                              A++;
+                          if(A>=C){
+                              A=0
+                              }
+                              z=setTimeout(play,m)
+                          }
+                          function stop(a){
+                          clearTimeout(z);
+                          var b=a.parent().children().index(a);
+                          A=b;
+                          B.find("ul:first").children("li").fadeOut();
+                          B.find("ul:first").children("li").eq(b).fadeIn();
+                          B.find(".slideshow_simple1_nav").children("li").css("background-color",w);
+                          B.find(".slideshow_simple1_nav").children("li").eq(A).css("background-color",x);
+                          B.find(".slideshow_simple1_title").text(a.find("ul:first").children("li").children("a").eq(A).attr("title"));
+                          if(B.find("ul:first").children("li").children("a").eq(A).attr("title")==""||B.find("ul:first").children("li").children("a").eq(A).attr("title")==undefined){
+                              B.find(".slideshow_simple1_title").hide()
+                              }else{
+                              B.find(".slideshow_simple1_title").show()
+                              }
+                              A++;
+                          if(A>=C){
+                              A=0
+                              }
+                          }
+                      function s_s_ul(a,b,c,d,e,f,g){
+                      b=parseInt(b);
+                      c=parseInt(c);
+                      d=parseInt(d);
+                      e=parseInt(e);
+                      var h=c+e*2+b*2;
+                      var i=d+e*2+b*2;
+                      B.css("width",h);
+                      B.css("height",i);
+                      var j=d+"px";
+                      var k=c+"px";
+                      var l="border: "+f+" solid "+" "+e+"px; height:"+j+"; width:"+k+"; padding:"+b+"px; background-color:"+g;
+                      a.attr("style",l)
+                      }
+                      function s_s_n(a,b,c){
+                      var d=a.children("li");
+                      var e="width: "+c+"; height:"+c+"; background-color:"+b+";";
+                      d.attr("style",e)
+                      }
+                      function s_s_t(a,b,c,d,e,f,g){
+                      d=parseInt(d);
+                      f=parseInt(f);
+                      g=parseInt(g);
+                      a.css("width",d+f*2+g*2+"px");
+                      a.css("background-color",c);
+                      a.css("color",b)
+                      }
+                  }
+              })(jQuery);
+  }
+    function render_advertise(){
+        $.get('/api/v1/work/adv/?type=2',
+            function(res){
+                console.log(res);
+                html = '';
+                $.each(res.results, function(i,e){
+                    html += '<li><a href="'+e.content+'" title=""><img src="'+e.cover+'" alt="slideshow_large"/></a></li>'
+                })
+                $("#slide-img").append(html)
+
+                init()
+                  $("#slideshow").slideshow_buttontitle({
+                    time_interval: '3000',
+                    window_background_color: "#FFF",
+                    window_padding: '2',
+                    window_width: document.body.clientWidth,
+                    window_height: '250',
+                    border_size: '1',
+                    border_color: 'black',
+                    title_text_color: 'white',
+                    title_background_color: '#42AEC2',
+                    button_color: '#84C5D2',
+                    button_current_color: '#2C7E8F',
+                    button_size: '15'
+                });
+                // scrolls();
+            }
+        )
+
+    }
+    render_advertise()
+
+    render_category();
+
+    function render_category(){
+
+        $.get('/api/v1/work/workcategory/',
+            function(res){
+                // var log = $('#nav').attr(data);
+                console.log(res);
+                html = '';
+                $.each(res.results, function(i,e){
+                    // html += '<li class="category_li"><a id="'+e.id+'" >'+e.name+'</a></li>'
+                    href = './jianzhi.html?type_id='+e.id;
+                    html += '<a href="'+href+'" data-role="none"><div class="img" style="background:url(./resource/'+(i+1)+'.png) center no-repeat; background-size:contain;"></div>'
+                    html += '<div class="text">'+e.name+'</div></a>'
+                })
+                $(".content").append(html)
+
+                
+            }
+        )
+
+    }
+</script>
+</head>
+<body id="cate5">
+<div id="slideshow" class="slideshow_buttontitle">
+    <ul id="slide-img">
+        <!-- <li><a href="#" title="title1"><img src="./plugin/51f886226f392.jpg" alt="slideshow_large"/></a></li>
+        <li><a href="#" title="title2"><img src="./plugin/51f886229ca16.jpg" alt="slideshow_large"/></a></li> -->
+    </ul>
+    <div class="slideshow_simple1_title">
+        title
+    </div>
+    <ul class="slideshow_simple1_nav">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div style="clear: both"></div>
+</div>
+<div id="nav">
+<!-- <div id="prev" onclick="myScroll.scrollToPage(&#39;prev&#39;, 0,400,8);return false">← prev</div> -->
+<!-- <ul id="indicator"> 
+<li class="active">1</li> 
+<li class="">2</li> 
+<li class="">3</li> 
+<li>4</li> 
+<li>5</li> 
+<li>6</li> 
+<li>7</li> 
+<li>8</li> 
+</ul> -->
+<!-- <div id="next" onclick="myScroll.scrollToPage(&#39;next&#39;, 0);return false">next →</div> -->
+</div>
+<div class="clr"></div>
+</div>
+
+<script>
+
+</script>
+<div class="content">
+</div>
+
+
+</body></html>

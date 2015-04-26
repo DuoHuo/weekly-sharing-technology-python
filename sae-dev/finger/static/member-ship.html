@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=decice-width,uer-scalable=no">
+<title>测试二</title>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<style>
+*{ margin:0; padding:0;}
+body{color: #333;line-height:20px;font:16px 'Microsoft YaHei', "hiragino sans gb",'黑体','宋体', Arial, Lucida Grande, Tahoma, sans-serif; background:#FFF;}
+
+.the_box{ width:100%;text-align:center;}
+.none{ display:none;}
+
+	/*the_form*/
+#the_form{}
+#the_form table{ width:80%;background:#FFF; margin:0 auto; padding:50px 0;}
+#the_form table td{ padding:10px 0;}
+.the_form_text{ width:93%; background:#FFF; border:1px #DDD solid; padding:10px 10px; font:15px 'Microsoft YaHei', "hiragino sans gb",'黑体','宋体', Arial, Lucida Grande, Tahoma, sans-serif; text-indent:1em;}
+.the_form_text:focus{outline:none;border-color:rgba(82, 168, 236, 0.8);-webkit-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1),0 0 8px rgba(82, 168, 236, 0.6);-moz-box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1),0 0 8px rgba(82, 168, 236, 0.6);box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.1),0 0 8px rgba(82, 168, 236, 0.6);}
+.the_form_submit{width:100%; background: #e84c3d; border:0 none; padding:15px 0px; font:15px 'Microsoft YaHei', "hiragino sans gb",'黑体','宋体', Arial, Lucida Grande, Tahoma, sans-serif; cursor:pointer; color:#FFF; margin-top:50px;}
+.the_form_submit:active{background: #e84c3d;}
+
+	/*the_card*/
+#the_card{ position:relative;}
+#the_card .card_num{ position:absolute; /*left:50%; top:50%;*/ font-size:20px; color:#FFF;-webkit-transform:rotate(90deg); -moz-transform:rotate(90deg); transform:rotate(90deg); width:80%;text-align:left;}
+#the_card img{ width:80%; height:auto;}
+</style>
+</head>
+
+<body>
+
+
+<!--the_form-->
+<div id="the_form" class="the_box none">
+<form action="" method="post">
+<table width="80%" height="80%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="left" valign="middle">用户名：</td>
+  </tr>
+  <tr>
+    <td align="left" valign="middle"><input type="text" name="car_num" id="car_num" class="the_form_text" placeholder="请填写用户名" /></td>
+  </tr>
+  <tr>
+    <td align="left" valign="middle">密码：</td>
+  </tr>
+  <tr>
+    <td align="left" valign="middle"><input type="text" name="phone" id="phone" class="the_form_text" placeholder="请填写密码" /></td>
+  </tr>
+    <tr>
+    <td align="left" valign="middle">电话：</td>
+  </tr>
+  <tr>
+    <td align="left" valign="middle"><input type="text" name="phone" id="phone" class="the_form_text" placeholder="请填写电话" /></td>
+  </tr>
+    <tr>
+    <td align="left" valign="middle">性别：</td>
+  </tr>
+  <tr>
+    <td align="left" valign="middle"><input type="text" name="phone" id="phone" class="the_form_text" placeholder="请填写密码" /></td>
+  </tr>
+    <tr>
+    <td align="left" valign="middle">密码：</td>
+  </tr>
+  <tr>
+    <td align="left" valign="middle"><input type="text" name="phone" id="phone" class="the_form_text" placeholder="请填写密码" /></td>
+  </tr>
+  
+  <tr>
+    <td align="left" valign="middle"><input type="submit" name="car_num" id="car_num" class="the_form_submit" value="提交" /></td>
+  </tr>
+</table>
+</form>
+</div>
+<!--/the_form-->
+
+
+
+<!--the_card-->
+<div id="the_card" class="the_box">
+<div class="card_num">64608330911safdsgf</div>
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" valign="middle"><img id='card' src='card.jpg' /></td>
+  </tr>
+</table>
+</div>
+<!--/the_card-->
+
+
+
+<script type="text/javascript">
+$(document).ready(function(e) {
+	var show=1;
+	if(show==1){
+		$('#the_form').removeClass('none').siblings().addClass('none');
+	}else{
+		$('#the_card').removeClass('none').siblings().addClass('none');
+	}
+	login();
+});
+
+function login(){
+	var code = getURLParameter('code');
+	var create = getURLParameter('create');
+	var getResult = getURLParameter('getResult');
+
+	$.get('http://127.0.0.1/~zcr/index.php?getResult=1&code='+code,
+			function(res){
+				console.log(res);
+				console.log('dd');
+			}
+		)
+}
+
+function getURLParameter(name) {
+  return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+}
+
+$(window).load(function() {
+	
+	$('.the_box').width($(window).width());
+	$('.the_box').height($(window).height());
+		
+	var num_mtop = $('#card').offset().top+$('.card_num').width()/2+15+"px";
+	var num_mleft = $('#card').offset().left-$('#card').width()/3+5+"px";
+	
+	//alert(num_mleft);
+	
+	$('.card_num').css({
+		"top":num_mtop,
+		"left":num_mleft
+	})
+	
+})
+
+</script>
+</body>
+</html>

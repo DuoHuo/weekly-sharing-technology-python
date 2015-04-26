@@ -1,0 +1,323 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html><head>
+<meta charset="UTF-8">
+<title>指尖南信</title>
+</head><body>
+<div class="wrap">
+<div class="cloudcenter">
+
+
+<html>
+<head>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="default2.css">
+<script>
+	var next = null;
+	var prev = null;
+	var url=window.location.toString();
+    var str="";
+    var type_id = '';
+    if(url.indexOf("?")!=-1){
+        var ary=url.split("?")[1].split("&");
+        for(var i in ary){
+            str=ary[i].split("=")[0];
+            if (str == "type_id") {
+                type_id = decodeURI(ary[i].split("=")[1]);
+            }
+        }
+    }
+    if(type_id !=''){
+		$.get('/api/v1/social/work/?type='+type_id, function(res){
+			count = res.count;
+			next = res.next;
+			prev = res.previous;
+			render_work(res)
+			next_prev_page(0);
+		})
+    }else{
+    	render_work_all();
+    }
+	
+	
+	function render_work_all(){
+		$.get('/api/v1/social/work/', function(res){
+				count = res.count;
+				next = res.next;
+				prev = res.previous;
+				render_work(res)
+				next_prev_page(0);
+			})
+	}
+
+	function next_prev_page(i){
+		if(i==1 && next!=null){
+			$.get(next, function(res){
+				render_work(res)
+				next = res.next;
+				prev = res.previous;
+			})
+		}
+
+		if(i==-1 && prev!=null){
+			$.get(prev, function(res){
+				render_work(res)
+				next = res.next;
+				prev = res.previous;
+			})
+		}
+
+	}
+
+	// function next_prev_page(next){
+	// 	if(next!=null){
+	// 		$('.next').click(function(){
+	// 			page+=1;
+	// 			$.get('/api/v1/social/shop/?page='+page, function(res){
+	// 				render_shop(res);
+	// 				// render_shop_all()
+	// 				// next_prev_page(res);
+	// 				if(res.previous!=null){
+	// 					$('.prev').click(function(){
+	// 						$.get(res.previous, function(res){
+	// 							render_shop(res);
+	// 							// render_shop_all()
+	// 							// next_prev_page(res);
+	// 						})
+	// 					})
+	// 				}
+
+	// 				if(res.next!=null){
+	// 					$('.next').click(function(){
+	// 						$.get(res.next, function(res){
+	// 							render_shop(res);
+	// 							// render_shop_all()
+	// 							// next_prev_page(res);
+	// 						})
+	// 					})
+	// 				}
+	// 			})
+	// 		})
+	// 	}
+
+	// }
+
+	function render_work(data){
+		$('#j-goods-container').html('');
+		results = data.results;
+		html = ''
+		console.log(data);
+		$.each(results, function(i,e){
+			html += '<section class="w-goods"><a href="'
+			html += './work_detail.html?id='+e.id
+			html +='"><div class="img-wrapper"><p><img alt="" data-pinit="registered" src="'
+			html += e.cover+'?imageView2/0/w/118/h/79/'
+			html +='" style="width: 300px; height: 167px;" /> </p></div>'
+			html += '<ul><li class="title"><span class="item-name">'
+			html += e.name
+			html += '</span></li>'
+			html += '<li class="info"> <span class="site-name">公司：<ins>'
+			html += e.company_name 
+			html += '</ins></span></li>'
+			html += '<li class="others">薪酬: <span>'
+			html += e.price
+			html += '</span></li>'
+			html += '<li class="others">工作地点: <span>'
+			html += e.area
+			html += '</span></li></ul></a></section>'
+			// console.log(html)
+
+		})
+
+		$('#j-goods-container').append(html);
+
+	}
+	var flag = 0
+	function render_category(){
+		if(flag==0){
+			$.get('/api/v1/social/workcategory/',
+				function(res){
+					// var log = $('#nav').attr(data);
+					console.log(res);
+					html = '<li><a id="all_category"  onclick="render_work_all();render_category();">全部分类</a></li>'
+					$.each(res.results, function(i,e){
+						html += '<li class="category_li"><a id="'+e.id+'" >'+e.name+'</a></li>'
+					})
+					$("#nav").append(html)
+					$('#nav').show();
+					flag = 1;
+					filter_by_type();
+					
+				}
+			)
+
+		}
+		else {
+			$('#nav').hide();
+			$('#nav').html('');
+			flag = 0;
+		}
+	}
+	var flag2 = 0
+	function render_region(){
+		if(flag2==0){
+			$.get('/api/v1/social/region/',
+				function(res){
+					// var log = $('#nav').attr(data);
+					console.log(res);
+					html = '<li><a id="quancheng" onclick="render_work_all();render_region();">全城</a></li> '
+					$.each(res.results, function(i,e){
+						html += '<li class="region_li"><a id="'+e.id+'" >'+e.name+'</a></li>'
+					})
+					$("#nav1").append(html)
+					$('#nav1').show();
+					flag2 = 1;
+					filter_by_region();
+
+				}
+			)
+
+		}
+		else {
+			$('#nav1').hide();
+			$('#nav1').html('');
+			flag2 = 0;
+		}
+	}
+
+	function filter_by_type(){
+			$('.category_li').click(function(){
+				$(this).find("a").css("background-color", "#dddddd")
+			var cat_id = $(this).find('a').attr('id');
+			$.get('/api/v1/social/work/?type='+cat_id,
+				function(res){
+					render_work(res);
+					// $('#nav').hide();
+					// render_region();
+					render_category();
+
+			}
+			)
+		})
+	}
+
+	function filter_by_region(){
+			$('.region_li').click(function(){
+				$(this).find("a").css("background-color", "#dddddd")
+			var region_id = $(this).find('a').attr('id');
+			$.get('/api/v1/social/work/?region='+region_id,
+				function(res){
+					render_work(res);
+					// $('#nav').hide();
+					// render_region();
+					render_region();
+
+			}
+			)
+		})
+	}
+
+</script>
+
+
+<style>
+*{margin:0; padding:0;}
+body,html{height:anto; width:100%;margin-bottom:51px;}
+.transp{position:absolute;background-color:#999; opacity: 0.45;-moz-opacity: 0.45;filter:alpha(opacity=45); width:100%; height:100%}
+.loading{position:absolute;backgroud-color:#ECECFF;top:50%; left:50%;margin-left:-17px;margin-top:-17px;width:35px; height:35px;}
+</style>
+
+<style>//footer.css
+	
+
+</style>
+
+<meta charset="utf-8">
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/static/mobile/global/logo.png">
+<meta name="description" content="团购,每日推荐最优质、省钱、放心的团购商品。团购——最权威的团购导航。">
+<meta name="keywords" content="团购网站大全,团购网站,团购导航,团购大全">
+<title>指尖南信</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<a name="top" id="top"></a>
+<div id="page" style="position:relative">
+	<article>
+	    <ul class="w-sort j-w-sort">
+		      <li data-type="category" id="category" onclick="render_category();">        
+				     全部分类
+		      </li>
+
+		      <li data-type="area" id="region" onclick="render_region();">   
+				     全城
+		      </li>
+	    </ul>
+
+	    <ul id="nav" class="allul" data='0' style="display:none;">   
+	    </ul>
+
+	    <ul id="nav1" class="allul" style="display:none;">  
+			       	    
+	    </ul>  
+
+	    <div id="j-goods-container">   
+			  
+		</div>   
+	</article> 
+</div>
+<div class="w-viewmore">
+		<div id="J_viewmore" style="background:#3185C7;" class="more prev" mon="#type=more" onclick="next_prev_page(-1)">上一页</div>
+		
+		<div id="J_viewmore" style="background:#3185C7;margin-left:20px;" class="more next" mon="#type=more" onclick="next_prev_page(1)">下一页</div>
+	</div>
+         <ul class="reg-list-2col row"><li></li></ul> 
+         <ul class="reg-list-2col row"><li></li></ul> 
+         
+         <ul class="reg-list-2col row"><li></li></ul> 
+         <ul class="reg-list-2col row"><li></li></ul> 
+         <ul class="reg-list-2col row"><li></li></ul>
+   
+
+   
+<footer>
+	<nav class="nav">
+		<ul class="box" style="margin:0px;padding:0px;">
+			<li style="background: #f4f4f4;">
+			       
+                    <a style="border:0px;" href="./card.html" class="">
+                               
+					<p class="card"></p>
+					<span>会员卡</span>
+				</a>
+                                </p>
+			</li>
+
+			<li>
+				<a style="border:0px;" href="./shop.html" class="">
+					<p id="Js-msg-num" class="msg"></p>
+					<span>商家</span>
+				</a>
+			</li>
+
+			<li>
+				<a style="border:0px;" href="./work.html" class='on' >
+					<p class="sign"></p>
+					<span>兼职</span>
+				</a>
+			</li>
+
+			<li>
+			       
+                <a style="border:0px;" href="./profile.html" class="my ">
+                               
+					<p class="my"></p>
+					<span>资料</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</footer>
+</body></html>
+</div></div></body></html>

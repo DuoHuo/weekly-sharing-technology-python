@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0060)http://txxzxlx.duapp.com/weixinhtml/accate1tid6928pagec.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD><META content="IE=10.000" 
+http-equiv="X-UA-Compatible">
+ 
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<TITLE>指尖南信</TITLE> 
+<META name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;"> 
+<META name="apple-mobile-web-app-capable" content="yes"> 
+<META name="apple-mobile-web-app-status-bar-style" content="black"> 
+<META name="format-detection" content="telephone=no">  <LINK href="星座心理学主页_files/news.css" 
+rel="stylesheet" type="text/css"> 
+<META name="GENERATOR" content="MSHTML 10.00.9200.16578"></HEAD> 
+<BODY id="cate1">
+<UL class="mainmenu">
+  <!-- <LI>
+  <DIV class="menubtn"><A href="http://m.kugou.com/uc/">
+  <DIV class="menumesg">
+  <DIV class="menuimg"><IMG src="星座心理学主页_files/5189a058a5b29.jpg"></DIV>
+  <DIV class="menutitle">爱音乐</DIV></DIV></A></DIV></LI>
+  <LI>
+  <DIV class="menubtn"><A href="http://app.m1905.cn/Vod/index/__pid/uc">
+  <DIV class="menumesg">
+  <DIV class="menuimg"><IMG src="星座心理学主页_files/5189ddb315ac1.jpg"></DIV>
+  <DIV class="menutitle">爱电影</DIV></DIV></A></DIV></LI>
+  <LI>
+  <DIV class="menubtn"><A href="http://wapp.baidu.com/">
+  <DIV class="menumesg">
+  <DIV class="menuimg"><IMG src="星座心理学主页_files/5189dc37bee88.jpg"></DIV>
+  <DIV class="menutitle">百度贴吧</DIV></DIV></A></DIV></LI>
+  <LI>
+  <DIV class="menubtn"><A href="http://infoapp.3g.qq.com/g/s?aid=astro&amp;g_ut=3&amp;g_f=20585#home">
+  <DIV class="menumesg">
+  <DIV class="menuimg"><IMG src="星座心理学主页_files/51899f64d9ba9.jpg"></DIV>
+  <DIV class="menutitle">星座测试</DIV></DIV></A></DIV></LI>
+  <LI>
+  <DIV class="menubtn"><A href="http://sports.3g.cn/nba/main.php">
+  <DIV class="menumesg">
+  <DIV class="menuimg"><IMG src="星座心理学主页_files/518a0c04e9a3b.jpg"></DIV>
+  <DIV class="menutitle">NBA快讯</DIV></DIV></A></DIV></LI>
+  <LI>
+  <DIV class="menubtn"><A href="http://uc.shuqi.com/?v=3&amp;fr=bch_sqa">
+  <DIV class="menumesg">
+  <DIV class="menuimg"><IMG src="星座心理学主页_files/518a62471f124.jpg"></DIV>
+  <DIV class="menutitle">小说频道</DIV></DIV></A></DIV></LI>
+  <LI>
+  <DIV class="menubtn"><A href="http://sina.cn/nc.php?vt=1&amp;pos=3">
+  <DIV class="menumesg">
+  <DIV class="menuimg"><IMG src="星座心理学主页_files/518a12e822098.jpg"></DIV>
+  <DIV class="menutitle">新闻频道</DIV></DIV></A></DIV></LI>
+  <LI>
+  <DIV class="menubtn"><A href="http://mo.amap.com/?s=uc#search">
+  <DIV class="menumesg">
+  <DIV class="menuimg"><IMG src="星座心理学主页_files/518a6494905a0.jpg"></DIV>
+  <DIV class="menutitle">地图导航</DIV></DIV></A></DIV></LI>
+  <LI>
+  <DIV class="menubtn"><A href="http://manhua.weibo.cn/i/index">
+  <DIV class="menumesg">
+  <DIV class="menuimg"><IMG src="星座心理学主页_files/518a0cad88b96.jpg"></DIV>
+  <DIV class="menutitle">动漫频道</DIV></DIV></A></DIV></LI>
+  <LI>
+  <DIV class="menubtn"><A href="http://meitu.lexun.com/?uc_param_str=sndnssvebifrpfutcpua&amp;entry=ucweb_nav">
+  <DIV class="menumesg">
+  <DIV class="menuimg"><IMG src="星座心理学主页_files/51899f64e3bcf.jpg"></DIV>
+  <DIV class="menutitle">美女福利姐</DIV></DIV></A></DIV></LI>
+  <LI>
+  <DIV class="menubtn"><A href="http://hao.uc.cn/bst?uc_param_str=prdnfrpfbivelabtbmntpvsscp">
+  <DIV class="menumesg">
+  <DIV class="menuimg"><IMG src="星座心理学主页_files/5189e08bef963.jpg"></DIV>
+  <DIV class="menutitle">百事通</DIV></DIV></A></DIV></LI> -->
+  <DIV class="clr"></DIV></UL>
+<DIV style="display: none;"></DIV>
+<DIV style="display: none;">
+
+</SCRIPT>
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+      function render_category(){
+      $.get('/api/v1/campus/activitycategory/',
+        function(res){
+          // var log = $('#nav').attr(data);
+          console.log(res);
+          html = ''
+          $.each(res.results, function(i,e){
+            html += '<li><div class="menubtn"><a href="./activity.html?cat_id='+e.id+'">'
+            html += '<div class=menumesg><div class="menuimg"><img src="'+e.cover+'"></div>'
+            html += '<div class="menutitle">'+e.name+'</div></div></a></div></li>'
+          })
+          $('.mainmenu').append(html);
+          console.log(html);
+        }
+
+
+      )
+
+  }
+
+      render_category()
+</script>
+</DIV></BODY></HTML>

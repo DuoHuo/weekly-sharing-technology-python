@@ -1,0 +1,1565 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-17 20:45+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: finger/settings.py:70
+msgid "English"
+msgstr ""
+
+#: finger/settings.py:71
+msgid "Chinese"
+msgstr ""
+
+#: site-packages/crispy_forms/tests/test_form_helper.py:129
+#: site-packages/crispy_forms/tests/test_form_helper.py:139
+#: site-packages/rest_framework/fields.py:252
+msgid "This field is required."
+msgstr ""
+
+#: site-packages/crispy_forms/tests/test_layout.py:467
+msgid "i18n text"
+msgstr ""
+
+#: site-packages/crispy_forms/tests/test_layout.py:469
+msgid "i18n legend"
+msgstr ""
+
+#: site-packages/crispy_forms/tests/test_layout_objects.py:111
+msgid "Enter a valid value."
+msgstr ""
+
+#: site-packages/django_filters/filters.py:153
+#: site-packages/xadmin/filters.py:266
+msgid "Any date"
+msgstr ""
+
+#: site-packages/django_filters/filters.py:154
+#: site-packages/xadmin/filters.py:273 site-packages/xadmin/widgets.py:30
+msgid "Today"
+msgstr ""
+
+#: site-packages/django_filters/filters.py:159
+#: site-packages/xadmin/filters.py:277
+msgid "Past 7 days"
+msgstr ""
+
+#: site-packages/django_filters/filters.py:163
+#: site-packages/xadmin/filters.py:281
+msgid "This month"
+msgstr ""
+
+#: site-packages/django_filters/filters.py:167
+#: site-packages/xadmin/filters.py:285
+msgid "This year"
+msgstr ""
+
+#: site-packages/django_filters/filterset.py:332
+#: site-packages/django_filters/filterset.py:341
+#, python-format
+msgid "%s (descending)"
+msgstr ""
+
+#: site-packages/django_filters/widgets.py:63
+#: site-packages/xadmin/filters.py:158 site-packages/xadmin/filters.py:190
+#: site-packages/xadmin/filters.py:402 site-packages/xadmin/filters.py:488
+#: site-packages/xadmin/filters.py:526
+msgid "All"
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:111
+msgid ""
+" Hold down \"Control\", or \"Command\" on a Mac, to select more than one."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:253
+#: site-packages/rest_framework/relations.py:289
+msgid "Invalid value."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:436
+#, python-format
+msgid "'%s' value must be either True or False."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:493
+msgid ""
+"Enter a valid 'slug' consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:508
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:571
+msgid "Enter a valid email address."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:613
+#, python-format
+msgid "Date has wrong format. Use one of these formats instead: %s"
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:677
+#, python-format
+msgid "Datetime has wrong format. Use one of these formats instead: %s"
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:747
+#, python-format
+msgid "Time has wrong format. Use one of these formats instead: %s"
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:804
+msgid "Enter a whole number."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:805
+#: site-packages/rest_framework/fields.py:858
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:806
+#: site-packages/rest_framework/fields.py:859
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:836
+#, python-format
+msgid "'%s' value must be a float."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:857
+msgid "Enter a number."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:860
+#, python-format
+msgid "Ensure that there are no more than %s digits in total."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:861
+#, python-format
+msgid "Ensure that there are no more than %s decimal places."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:862
+#, python-format
+msgid "Ensure that there are no more than %s digits before the decimal point."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:929
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:930
+msgid "No file was submitted."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:931
+msgid "The submitted file is empty."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:932
+#, python-format
+msgid ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:933
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: site-packages/rest_framework/fields.py:973
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: site-packages/rest_framework/generics.py:156
+msgid "Page is not 'last', nor can it be converted to an int."
+msgstr ""
+
+#: site-packages/rest_framework/generics.py:160
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: site-packages/rest_framework/relations.py:199
+#, python-format
+msgid "Invalid pk '%s' - object does not exist."
+msgstr ""
+
+#: site-packages/rest_framework/relations.py:200
+#, python-format
+msgid "Incorrect type.  Expected pk value, received %s."
+msgstr ""
+
+#: site-packages/rest_framework/relations.py:288
+#, python-format
+msgid "Object with %s=%s does not exist."
+msgstr ""
+
+#: site-packages/rest_framework/relations.py:324
+msgid "Invalid hyperlink - No URL match"
+msgstr ""
+
+#: site-packages/rest_framework/relations.py:325
+msgid "Invalid hyperlink - Incorrect URL match"
+msgstr ""
+
+#: site-packages/rest_framework/relations.py:326
+msgid "Invalid hyperlink due to configuration error"
+msgstr ""
+
+#: site-packages/rest_framework/relations.py:327
+msgid "Invalid hyperlink - object does not exist."
+msgstr ""
+
+#: site-packages/rest_framework/relations.py:328
+#, python-format
+msgid "Incorrect type.  Expected url string, received %s."
+msgstr ""
+
+#: site-packages/rest_framework/tests/models.py:37
+msgid "Text comes here"
+msgstr ""
+
+#: site-packages/rest_framework/tests/models.py:37
+msgid "Text description."
+msgstr ""
+
+#: site-packages/rest_framework/tests/test_renderers.py:293
+msgid "test"
+msgstr ""
+
+#: site-packages/rest_framework/tests/test_serializer.py:1523
+msgid "lazystring"
+msgstr ""
+
+#: site-packages/xadmin/filters.py:159
+#: site-packages/xadmin/plugins/export.py:162
+msgid "Yes"
+msgstr ""
+
+#: site-packages/xadmin/filters.py:160
+#: site-packages/xadmin/plugins/export.py:162
+msgid "No"
+msgstr ""
+
+#: site-packages/xadmin/filters.py:174
+msgid "Unknown"
+msgstr ""
+
+#: site-packages/xadmin/filters.py:267
+msgid "Has date"
+msgstr ""
+
+#: site-packages/xadmin/filters.py:270
+msgid "Has no date"
+msgstr ""
+
+#: site-packages/xadmin/forms.py:10
+msgid ""
+"Please enter the correct username and password for a staff account. Note "
+"that both fields are case-sensitive."
+msgstr ""
+
+#: site-packages/xadmin/forms.py:21
+msgid "Please log in again, because your session has expired."
+msgstr ""
+
+#: site-packages/xadmin/forms.py:41
+#, python-format
+msgid "Your e-mail address is not your username. Try '%s' instead."
+msgstr ""
+
+#: site-packages/xadmin/models.py:47
+msgid "Title"
+msgstr ""
+
+#: site-packages/xadmin/models.py:48 site-packages/xadmin/models.py:87
+#: site-packages/xadmin/models.py:106
+msgid "user"
+msgstr ""
+
+#: site-packages/xadmin/models.py:49
+msgid "Url Name"
+msgstr ""
+
+#: site-packages/xadmin/models.py:51
+msgid "Query String"
+msgstr ""
+
+#: site-packages/xadmin/models.py:52
+msgid "Is Shared"
+msgstr ""
+
+#: site-packages/xadmin/models.py:65
+#: site-packages/xadmin/plugins/bookmark.py:49
+#: site-packages/xadmin/plugins/bookmark.py:178
+msgid "Bookmark"
+msgstr ""
+
+#: site-packages/xadmin/models.py:66
+msgid "Bookmarks"
+msgstr ""
+
+#: site-packages/xadmin/models.py:88
+msgid "Settings Key"
+msgstr ""
+
+#: site-packages/xadmin/models.py:89
+msgid "Settings Content"
+msgstr ""
+
+#: site-packages/xadmin/models.py:101
+msgid "User Setting"
+msgstr ""
+
+#: site-packages/xadmin/models.py:102
+msgid "User Settings"
+msgstr ""
+
+#: site-packages/xadmin/models.py:107
+msgid "Page"
+msgstr ""
+
+#: site-packages/xadmin/models.py:108
+#: site-packages/xadmin/views/dashboard.py:81
+#: site-packages/xadmin/views/dashboard.py:91
+msgid "Widget Type"
+msgstr ""
+
+#: site-packages/xadmin/models.py:109
+#: site-packages/xadmin/views/dashboard.py:82
+msgid "Widget Params"
+msgstr ""
+
+#: site-packages/xadmin/models.py:136
+msgid "User Widget"
+msgstr ""
+
+#: site-packages/xadmin/models.py:137
+msgid "User Widgets"
+msgstr ""
+
+#: site-packages/xadmin/widgets.py:48
+msgid "Now"
+msgstr ""
+
+#: site-packages/xadmin/plugins/actions.py:54
+#, python-format
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/actions.py:67
+#, python-format
+msgid "Successfully deleted %(count)d %(items)s."
+msgstr ""
+
+#: site-packages/xadmin/plugins/actions.py:99
+#: site-packages/xadmin/views/delete.py:68
+#, python-format
+msgid "Cannot delete %(name)s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/actions.py:101
+#: site-packages/xadmin/views/delete.py:71
+msgid "Are you sure?"
+msgstr ""
+
+#: site-packages/xadmin/plugins/actions.py:147
+#, python-format
+msgid "%(total_count)s selected"
+msgid_plural "All %(total_count)s selected"
+msgstr[0] ""
+msgstr[1] ""
+
+#: site-packages/xadmin/plugins/actions.py:151
+#, python-format
+msgid "0 of %(cnt)s selected"
+msgstr ""
+
+#: site-packages/xadmin/plugins/actions.py:168
+#: site-packages/xadmin/plugins/actions.py:178
+msgid ""
+"Items must be selected in order to perform actions on them. No items have "
+"been changed."
+msgstr ""
+
+#: site-packages/xadmin/plugins/aggregation.py:14
+msgid "Min"
+msgstr ""
+
+#: site-packages/xadmin/plugins/aggregation.py:14
+msgid "Max"
+msgstr ""
+
+#: site-packages/xadmin/plugins/aggregation.py:14
+msgid "Avg"
+msgstr ""
+
+#: site-packages/xadmin/plugins/aggregation.py:14
+msgid "Sum"
+msgstr ""
+
+#: site-packages/xadmin/plugins/aggregation.py:14
+msgid "Count"
+msgstr ""
+
+#: site-packages/xadmin/plugins/auth.py:21
+#, python-format
+msgid "Can add %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/auth.py:22
+#, python-format
+msgid "Can change %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/auth.py:23
+#, python-format
+msgid "Can edit %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/auth.py:24
+#, python-format
+msgid "Can delete %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/auth.py:25
+#, python-format
+msgid "Can view %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/auth.py:87
+msgid "Personal info"
+msgstr ""
+
+#: site-packages/xadmin/plugins/auth.py:91
+msgid "Permissions"
+msgstr ""
+
+#: site-packages/xadmin/plugins/auth.py:94
+msgid "Important dates"
+msgstr ""
+
+#: site-packages/xadmin/plugins/auth.py:99
+msgid "Status"
+msgstr ""
+
+#: site-packages/xadmin/plugins/auth.py:111
+msgid "Permission Name"
+msgstr ""
+
+#: site-packages/xadmin/plugins/auth.py:161
+msgid "Change Password"
+msgstr ""
+
+#: site-packages/xadmin/plugins/auth.py:191
+#, python-format
+msgid "Change password: %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/auth.py:216
+#: site-packages/xadmin/plugins/auth.py:248
+msgid "Password changed successfully."
+msgstr ""
+
+#: site-packages/xadmin/plugins/auth.py:235
+#: site-packages/xadmin/templates/xadmin/auth/user/change_password.html:11
+#: site-packages/xadmin/templates/xadmin/auth/user/change_password.html:22
+#: site-packages/xadmin/templates/xadmin/auth/user/change_password.html:55
+msgid "Change password"
+msgstr ""
+
+#: site-packages/xadmin/plugins/batch.py:44
+msgid "Change this field"
+msgstr ""
+
+#: site-packages/xadmin/plugins/batch.py:65
+#, python-format
+msgid "Batch Change selected %(verbose_name_plural)s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/batch.py:88
+#, python-format
+msgid "Successfully change %(count)d %(items)s."
+msgstr ""
+
+#: site-packages/xadmin/plugins/batch.py:136
+#, python-format
+msgid "Batch change %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/bookmark.py:171
+msgid "bookmark"
+msgstr ""
+
+#: site-packages/xadmin/plugins/bookmark.py:174
+msgid "Bookmark Widget, can show user's bookmark list data in widget."
+msgstr ""
+
+#: site-packages/xadmin/plugins/chart.py:24
+msgid "Show models simple chart."
+msgstr ""
+
+#: site-packages/xadmin/plugins/chart.py:50
+#, python-format
+msgid "%s Charts"
+msgstr ""
+
+#: site-packages/xadmin/plugins/comments.py:33
+msgid "Metadata"
+msgstr ""
+
+#: site-packages/xadmin/plugins/comments.py:60
+msgid "flagged"
+msgid_plural "flagged"
+msgstr[0] ""
+msgstr[1] ""
+
+#: site-packages/xadmin/plugins/comments.py:61
+msgid "Flag selected comments"
+msgstr ""
+
+#: site-packages/xadmin/plugins/comments.py:66
+msgid "approved"
+msgid_plural "approved"
+msgstr[0] ""
+msgstr[1] ""
+
+#: site-packages/xadmin/plugins/comments.py:67
+msgid "Approve selected comments"
+msgstr ""
+
+#: site-packages/xadmin/plugins/comments.py:72
+msgid "removed"
+msgid_plural "removed"
+msgstr[0] ""
+msgstr[1] ""
+
+#: site-packages/xadmin/plugins/comments.py:73
+msgid "Remove selected comments"
+msgstr ""
+
+#: site-packages/xadmin/plugins/comments.py:86
+#, python-format
+msgid "1 comment was successfully %(action)s."
+msgid_plural "%(count)s comments were successfully %(action)s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: site-packages/xadmin/plugins/details.py:52
+#: site-packages/xadmin/views/list.py:576
+#, python-format
+msgid "Details of %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/editable.py:47
+#, python-format
+msgid "Enter %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/editable.py:74
+#: site-packages/xadmin/views/dashboard.py:645
+#: site-packages/xadmin/views/delete.py:26
+#: site-packages/xadmin/views/detail.py:144
+#: site-packages/xadmin/views/edit.py:428
+#, python-format
+msgid "%(name)s object with primary key %(key)r does not exist."
+msgstr ""
+
+#: site-packages/xadmin/plugins/export.py:95
+#: site-packages/xadmin/plugins/export.py:132
+msgid "Sheet"
+msgstr ""
+
+#: site-packages/xadmin/plugins/filters.py:132
+#: site-packages/xadmin/plugins/quickfilter.py:140
+#, python-format
+msgid "<b>Filtering error:</b> %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/images.py:29
+msgid "Previous"
+msgstr ""
+
+#: site-packages/xadmin/plugins/images.py:29
+msgid "Next"
+msgstr ""
+
+#: site-packages/xadmin/plugins/images.py:29
+msgid "Slideshow"
+msgstr ""
+
+#: site-packages/xadmin/plugins/images.py:29
+msgid "Download"
+msgstr ""
+
+#: site-packages/xadmin/plugins/images.py:50
+msgid "Change:"
+msgstr ""
+
+#: site-packages/xadmin/plugins/layout.py:15
+msgid "Table"
+msgstr ""
+
+#: site-packages/xadmin/plugins/layout.py:21
+msgid "Thumbnails"
+msgstr ""
+
+#: site-packages/xadmin/plugins/passwords.py:64
+msgid "Forgotten your password or username?"
+msgstr ""
+
+#: site-packages/xadmin/plugins/quickform.py:77
+#, python-format
+msgid "Create New %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/relate.py:73
+msgid "Related Objects"
+msgstr ""
+
+#: site-packages/xadmin/plugins/relfield.py:29
+#: site-packages/xadmin/plugins/topnav.py:38
+#, python-format
+msgid "Search %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/themes.py:47
+msgid "Default"
+msgstr ""
+
+#: site-packages/xadmin/plugins/themes.py:48
+msgid "Default bootstrap theme"
+msgstr ""
+
+#: site-packages/xadmin/plugins/themes.py:49
+msgid "Bootstrap2"
+msgstr ""
+
+#: site-packages/xadmin/plugins/themes.py:49
+msgid "Bootstrap 2.x theme"
+msgstr ""
+
+#: site-packages/xadmin/plugins/topnav.py:63
+#: site-packages/xadmin/views/dashboard.py:462
+#: site-packages/xadmin/views/edit.py:361
+#: site-packages/xadmin/views/edit.py:370
+#, python-format
+msgid "Add %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:130
+msgid "Initial version."
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:132
+msgid "Change version."
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:134
+msgid "Revert version."
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:136
+msgid "Rercover version."
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:138
+#, python-format
+msgid "Deleted %(verbose_name)s."
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:166
+#: site-packages/xadmin/templates/xadmin/views/recover_form.html:26
+msgid "Recover"
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:182
+#: site-packages/xadmin/templates/xadmin/views/model_history.html:11
+#: site-packages/xadmin/templates/xadmin/views/revision_diff.html:11
+#: site-packages/xadmin/templates/xadmin/views/revision_form.html:15
+msgid "History"
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:225
+#: site-packages/xadmin/templates/xadmin/views/recover_form.html:14
+#: site-packages/xadmin/templates/xadmin/views/recover_list.html:10
+#, python-format
+msgid "Recover deleted %(name)s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:263
+#, python-format
+msgid "Change history: %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:313
+msgid "Must select two versions."
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:321
+msgid "Please select two different versions."
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:408
+#: site-packages/xadmin/plugins/xversion.py:516
+#, python-format
+msgid "Current: %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:440
+#, python-format
+msgid "Revert %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:456
+#, python-format
+msgid ""
+"The %(model)s \"%(name)s\" was reverted successfully. You may edit it again "
+"below."
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:477
+#, python-format
+msgid "Recover %s"
+msgstr ""
+
+#: site-packages/xadmin/plugins/xversion.py:493
+#, python-format
+msgid ""
+"The %(model)s \"%(name)s\" was recovered successfully. You may edit it again "
+"below."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/404.html:4
+#: site-packages/xadmin/templates/xadmin/404.html:8
+msgid "Page not found"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/404.html:10
+msgid "We're sorry, but the requested page could not be found."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/500.html:7
+#: site-packages/xadmin/templates/xadmin/base_site.html:57
+#: site-packages/xadmin/templates/xadmin/auth/user/change_password.html:10
+#: site-packages/xadmin/templates/xadmin/auth/user/change_password.html:15
+#: site-packages/xadmin/templates/xadmin/includes/sitemenu_default.html:7
+#: site-packages/xadmin/templates/xadmin/views/app_index.html:9
+#: site-packages/xadmin/templates/xadmin/views/batch_change_form.html:9
+#: site-packages/xadmin/templates/xadmin/views/invalid_setup.html:7
+#: site-packages/xadmin/templates/xadmin/views/model_dashboard.html:7
+#: site-packages/xadmin/templates/xadmin/views/model_delete_selected_confirm.html:8
+#: site-packages/xadmin/templates/xadmin/views/model_history.html:8
+#: site-packages/xadmin/templates/xadmin/views/recover_form.html:8
+#: site-packages/xadmin/templates/xadmin/views/recover_list.html:8
+#: site-packages/xadmin/templates/xadmin/views/revision_diff.html:8
+#: site-packages/xadmin/templates/xadmin/views/revision_form.html:8
+#: site-packages/xadmin/views/base.py:456
+msgid "Home"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/500.html:8
+msgid "Server error"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/500.html:12
+msgid "Server error (500)"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/500.html:15
+msgid "Server Error <em>(500)</em>"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/500.html:16
+msgid ""
+"There's been an error. It's been reported to the site administrators via e-"
+"mail and should be fixed shortly. Thanks for your patience."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/base_site.html:22
+msgid "Welcome,"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/base_site.html:28
+msgid "Log out"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/base_site.html:40
+msgid "You don't have permission to edit anything."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/complete.html:11
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/done.html:11
+msgid "Password reset successful"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/complete.html:14
+msgid "Your password has been set.  You may go ahead and log in now."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/complete.html:15
+msgid "Log in"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/confirm.html:12
+msgid "Enter new password"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/confirm.html:17
+msgid ""
+"Please enter your new password twice so we can verify you typed it in "
+"correctly."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/confirm.html:19
+msgid "Change my password"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/confirm.html:24
+msgid "Password reset unsuccessful"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/confirm.html:27
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used.  Please request a new password reset."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/done.html:14
+msgid ""
+"We've e-mailed you instructions for setting your password to the e-mail "
+"address you submitted. You should be receiving it shortly."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/email.html:2
+#, python-format
+msgid ""
+"You're receiving this e-mail because you requested a password reset for your "
+"user account at %(site_name)s."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/email.html:4
+msgid "Please go to the following page and choose a new password:"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/email.html:8
+msgid "Your username, in case you've forgotten:"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/email.html:10
+msgid "Thanks for using our site!"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/email.html:12
+#, python-format
+msgid "The %(site_name)s team"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/form.html:13
+msgid "Password reset"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/form.html:17
+msgid ""
+"Forgotten your password? Enter your e-mail address below, and we'll e-mail "
+"instructions for setting a new one."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/form.html:25
+msgid "E-mail address:"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/password_reset/form.html:33
+msgid "Reset my password"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/user/add_form.html:6
+msgid ""
+"First, enter a username and password. Then, you'll be able to edit more user "
+"options."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/user/add_form.html:8
+msgid "Enter a username and password."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/user/change_password.html:31
+#: site-packages/xadmin/templates/xadmin/views/batch_change_form.html:24
+#: site-packages/xadmin/templates/xadmin/views/form.html:18
+#: site-packages/xadmin/templates/xadmin/views/model_form.html:20
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] ""
+msgstr[1] ""
+
+#: site-packages/xadmin/templates/xadmin/auth/user/change_password.html:38
+msgid "Enter your new password."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/auth/user/change_password.html:40
+#, python-format
+msgid "Enter a new password for the user <strong>%(username)s</strong>."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/comm.top.theme.html:4
+msgid "Themes"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/comm.top.topnav.html:8
+#: site-packages/xadmin/templates/xadmin/filters/char.html:7
+#: site-packages/xadmin/templates/xadmin/filters/fk_search.html:7
+#: site-packages/xadmin/templates/xadmin/filters/fk_search.html:14
+#: site-packages/xadmin/templates/xadmin/filters/number.html:7
+msgid "Search"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/comm.top.topnav.html:22
+msgid "Add"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_form.submit_line.wizard.html:9
+#: site-packages/xadmin/templates/xadmin/blocks/model_form.submit_line.wizard.html:26
+msgid "Prev step"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_form.submit_line.wizard.html:13
+#: site-packages/xadmin/templates/xadmin/blocks/model_form.submit_line.wizard.html:29
+msgid "Next step"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_form.submit_line.wizard.html:15
+#: site-packages/xadmin/templates/xadmin/blocks/model_form.submit_line.wizard.html:31
+#: site-packages/xadmin/templates/xadmin/includes/submit_line.html:10
+#: site-packages/xadmin/templates/xadmin/includes/submit_line.html:13
+#: site-packages/xadmin/templates/xadmin/views/form.html:30
+msgid "Save"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html:7
+msgid "Clean Bookmarks"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html:18
+msgid "No Bookmarks"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html:22
+msgid "New Bookmark"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html:26
+msgid "Save current page as Bookmark"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html:32
+msgid "Enter bookmark title"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html:33
+msgid "Waiting"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.nav_menu.bookmarks.html:33
+msgid "Save Bookmark"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.nav_menu.filters.html:4
+msgid "Filters"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.nav_menu.filters.html:8
+msgid "Clean Filters"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.results_bottom.actions.html:19
+msgid "Click here to select the objects across all pages"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.results_bottom.actions.html:19
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.results_bottom.actions.html:20
+msgid "Clear selection"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.results_top.charts.html:4
+msgid "Charts"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html:4
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html:8
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html:19
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html:47
+msgid "Export"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html:26
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html:29
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html:32
+msgid "Export with table header."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html:35
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html:38
+msgid "Export with format."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html:42
+msgid "Export all data."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.exports.html:46
+#: site-packages/xadmin/templates/xadmin/widgets/base.html:41
+msgid "Close"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.layouts.html:4
+msgid "Layout"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.refresh.html:8
+msgid "Clean Refresh"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/blocks/model_list.top_toolbar.refresh.html:14
+#, python-format
+msgid "Every %(t)s seconds"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/edit_inline/blank.html:5
+#: site-packages/xadmin/views/detail.py:22
+#: site-packages/xadmin/views/edit.py:100
+#: site-packages/xadmin/views/list.py:28
+msgid "Null"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/char.html:13
+msgid "Enter"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/date.html:10
+#: site-packages/xadmin/templates/xadmin/filters/date.html:13
+msgid "Choice Date"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/date.html:18
+msgid "YY"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/date.html:19
+msgid "year"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/date.html:22
+msgid "MM"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/date.html:23
+msgid "month"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/date.html:26
+msgid "DD"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/date.html:27
+msgid "day"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/date.html:29
+#: site-packages/xadmin/templates/xadmin/filters/date.html:46
+#: site-packages/xadmin/templates/xadmin/filters/date.html:54
+#: site-packages/xadmin/templates/xadmin/filters/fk_search.html:16
+#: site-packages/xadmin/templates/xadmin/filters/number.html:37
+msgid "Apply"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/date.html:34
+msgid "Date Range"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/date.html:41
+msgid "Select Date"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/date.html:42
+msgid "From"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/date.html:44
+msgid "To"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/fk_search.html:18
+#: site-packages/xadmin/templates/xadmin/filters/number.html:39
+msgid "Clean"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/number.html:17
+#: site-packages/xadmin/templates/xadmin/filters/number.html:25
+#: site-packages/xadmin/templates/xadmin/filters/number.html:33
+msgid "Enter Number"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/filters/rel.html:3
+#, python-format
+msgid " By %(filter_title)s "
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/forms/transfer.html:4
+msgid "Available"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/forms/transfer.html:12
+msgid "Click to choose all at once."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/forms/transfer.html:12
+msgid "Choose all"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/forms/transfer.html:16
+msgid "Choose"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/forms/transfer.html:19
+#: site-packages/xadmin/templates/xadmin/widgets/base.html:40
+msgid "Remove"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/forms/transfer.html:23
+msgid "Chosen"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/forms/transfer.html:27
+msgid "Click to remove all chosen at once."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/forms/transfer.html:27
+msgid "Remove all"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/includes/pagination.html:9
+msgid "Show all"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/includes/submit_line.html:10
+#: site-packages/xadmin/templates/xadmin/includes/submit_line.html:13
+#: site-packages/xadmin/templates/xadmin/views/form.html:30
+msgid "Saving.."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/includes/submit_line.html:17
+msgid "Save as new"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/includes/submit_line.html:18
+msgid "Save and add another"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/includes/submit_line.html:19
+msgid "Save and continue editing"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/includes/submit_line.html:24
+#: site-packages/xadmin/templates/xadmin/views/model_detail.html:28
+#: site-packages/xadmin/views/delete.py:91
+msgid "Delete"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/app_index.html:13
+#, python-format
+msgid "%(name)s"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/batch_change_form.html:11
+msgid "Change multiple objects"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/batch_change_form.html:16
+#, python-format
+msgid "Change one %(objects_name)s"
+msgid_plural "Batch change %(counter)s %(objects_name)s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: site-packages/xadmin/templates/xadmin/views/batch_change_form.html:38
+msgid "Change Multiple"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/dashboard.html:15
+#: site-packages/xadmin/templates/xadmin/views/dashboard.html:22
+#: site-packages/xadmin/templates/xadmin/views/dashboard.html:23
+msgid "Add Widget"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/invalid_setup.html:13
+msgid ""
+"Something's wrong with your database installation. Make sure the appropriate "
+"database tables have been created, and make sure the database is readable by "
+"the appropriate user."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/logged_out.html:16
+msgid "Logout Success"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/logged_out.html:17
+msgid "Thanks for spending some quality time with the Web site today."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/logged_out.html:19
+msgid "Close Window"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/logged_out.html:20
+msgid "Log in again"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/login.html:39
+#: site-packages/xadmin/views/website.py:38
+msgid "Please Login"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/login.html:52
+msgid "Username"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/login.html:64
+msgid "Password"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/login.html:75
+msgid "log in"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_dashboard.html:26
+#: site-packages/xadmin/templates/xadmin/views/model_detail.html:25
+msgid "Edit"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_delete_confirm.html:11
+#, python-format
+msgid ""
+"Deleting the %(verbose_name)s '%(escaped_object)s' would result in deleting "
+"related objects, but your account doesn't have permission to delete the "
+"following types of objects:"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_delete_confirm.html:19
+#, python-format
+msgid ""
+"Deleting the %(verbose_name)s '%(escaped_object)s' would require deleting "
+"the following protected related objects:"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_delete_confirm.html:27
+#, python-format
+msgid ""
+"Are you sure you want to delete the %(verbose_name)s \"%(escaped_object)s\"? "
+"All of the following related items will be deleted:"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_delete_confirm.html:34
+#: site-packages/xadmin/templates/xadmin/views/model_delete_selected_confirm.html:49
+msgid "Yes, I'm sure"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_delete_confirm.html:35
+#: site-packages/xadmin/templates/xadmin/views/model_delete_selected_confirm.html:50
+msgid "Cancel"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_delete_selected_confirm.html:10
+msgid "Delete multiple objects"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_delete_selected_confirm.html:18
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would result in deleting related "
+"objects, but your account doesn't have permission to delete the following "
+"types of objects:"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_delete_selected_confirm.html:26
+#, python-format
+msgid ""
+"Deleting the selected %(objects_name)s would require deleting the following "
+"protected related objects:"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_delete_selected_confirm.html:34
+#, python-format
+msgid ""
+"Are you sure you want to delete the selected %(objects_name)s? All of the "
+"following objects and their related items will be deleted:"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_history.html:26
+msgid "Diff"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_history.html:27
+#: site-packages/xadmin/templates/xadmin/views/recover_list.html:25
+msgid "Date/time"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_history.html:28
+msgid "User"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_history.html:29
+msgid "Comment"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_history.html:54
+msgid "Diff Select Versions"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_history.html:58
+msgid ""
+"This object doesn't have a change history. It probably wasn't added via this "
+"admin site."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_list.html:29
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_list.html:39
+msgid "Columns"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_list.html:42
+msgid "Restore Selected"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/model_list.html:147
+#: site-packages/xadmin/templates/xadmin/widgets/list.html:33
+msgid "Empty list"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/recover_form.html:20
+msgid "Press the recover button below to recover this version of the object."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/recover_list.html:19
+msgid ""
+"Choose a date from the list below to recover a deleted version of an object."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/recover_list.html:39
+msgid "There are no deleted objects to recover."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/revision_diff.html:12
+#: site-packages/xadmin/templates/xadmin/views/revision_diff.html:17
+#, python-format
+msgid "Diff %(verbose_name)s"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/revision_diff.html:25
+msgid "Field"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/revision_diff.html:26
+msgid "Version A"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/revision_diff.html:27
+msgid "Version B"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/revision_diff.html:39
+msgid "Revert to"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/revision_diff.html:40
+#: site-packages/xadmin/templates/xadmin/views/revision_diff.html:41
+msgid "Revert"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/revision_form.html:16
+#, python-format
+msgid "Revert %(verbose_name)s"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/revision_form.html:21
+msgid "Press the revert button below to revert to this version of the object."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/views/revision_form.html:27
+msgid "Revert this revision"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/widgets/addform.html:14
+msgid "Success"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/widgets/addform.html:14
+msgid "Add success, click <a id='change-link'>edit</a> to edit."
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/widgets/addform.html:17
+msgid "Quick Add"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/widgets/base.html:31
+msgid "Widget Options"
+msgstr ""
+
+#: site-packages/xadmin/templates/xadmin/widgets/base.html:42
+msgid "Save changes"
+msgstr ""
+
+#: site-packages/xadmin/views/base.py:438
+msgid "Django Xadmin"
+msgstr ""
+
+#: site-packages/xadmin/views/dashboard.py:185
+msgid "Widget ID"
+msgstr ""
+
+#: site-packages/xadmin/views/dashboard.py:186
+msgid "Widget Title"
+msgstr ""
+
+#: site-packages/xadmin/views/dashboard.py:249
+msgid "Html Content Widget, can write any html content in widget."
+msgstr ""
+
+#: site-packages/xadmin/views/dashboard.py:252
+msgid "Html Content"
+msgstr ""
+
+#: site-packages/xadmin/views/dashboard.py:315
+msgid "Target Model"
+msgstr ""
+
+#: site-packages/xadmin/views/dashboard.py:366
+msgid "Quick button Widget, quickly open any page."
+msgstr ""
+
+#: site-packages/xadmin/views/dashboard.py:368
+msgid "Quick Buttons"
+msgstr ""
+
+#: site-packages/xadmin/views/dashboard.py:413
+msgid "Any Objects list Widget."
+msgstr ""
+
+#: site-packages/xadmin/views/dashboard.py:453
+msgid "Add any model object Widget."
+msgstr ""
+
+#: site-packages/xadmin/views/dashboard.py:488
+msgid "Dashboard"
+msgstr ""
+
+#: site-packages/xadmin/views/dashboard.py:629
+#, python-format
+msgid "%s Dashboard"
+msgstr ""
+
+#: site-packages/xadmin/views/delete.py:101
+#, python-format
+msgid "The %(name)s \"%(obj)s\" was deleted successfully."
+msgstr ""
+
+#: site-packages/xadmin/views/detail.py:172
+#: site-packages/xadmin/views/edit.py:199
+#: site-packages/xadmin/views/form.py:72
+msgid "Other Fields"
+msgstr ""
+
+#: site-packages/xadmin/views/detail.py:233
+#, python-format
+msgid "%s Detail"
+msgstr ""
+
+#: site-packages/xadmin/views/edit.py:394
+#, python-format
+msgid "The %(name)s \"%(obj)s\" was added successfully."
+msgstr ""
+
+#: site-packages/xadmin/views/edit.py:399
+#: site-packages/xadmin/views/edit.py:494
+msgid "You may edit it again below."
+msgstr ""
+
+#: site-packages/xadmin/views/edit.py:403
+#: site-packages/xadmin/views/edit.py:497
+#, python-format
+msgid "You may add another %s below."
+msgstr ""
+
+#: site-packages/xadmin/views/edit.py:445
+#, python-format
+msgid "Change %s"
+msgstr ""
+
+#: site-packages/xadmin/views/edit.py:490
+#, python-format
+msgid "The %(name)s \"%(obj)s\" was changed successfully."
+msgstr ""
+
+#: site-packages/xadmin/views/form.py:164
+#, python-format
+msgid "The %s was changed successfully."
+msgstr ""
+
+#: site-packages/xadmin/views/list.py:198
+msgid "Database error"
+msgstr ""
+
+#: site-packages/xadmin/views/list.py:372
+#, python-format
+msgid "%s List"
+msgstr ""
+
+#: site-packages/xadmin/views/list.py:500
+msgid "Sort ASC"
+msgstr ""
+
+#: site-packages/xadmin/views/list.py:501
+msgid "Sort DESC"
+msgstr ""
+
+#: site-packages/xadmin/views/list.py:505
+msgid "Cancel Sort"
+msgstr ""
+
+#: site-packages/xadmin/views/website.py:16
+msgid "Main Dashboard"
+msgstr ""
+
+#: social/models.py:29
+msgid "名字"
+msgstr ""

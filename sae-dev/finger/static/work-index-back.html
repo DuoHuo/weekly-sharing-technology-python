@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>指尖南信</title>
+<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="./css/index.css" />
+<script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="./js/g.base.js"></script>
+<script type="text/javascript" src="./js/iscroll.js"></script>
+<script type="text/javascript" src="./js/alert.js"></script>
+<script type="text/javascript" src="./js/common.js"></script>
+<script type="text/javascript">
+    // var myScroll;
+    // function loaded() {
+    //     myScroll = new iScroll('wrapper', {
+    //         snap: true,
+    //         momentum: false,
+    //         hScrollbar: false,
+    //         onScrollEnd: function() {
+    //             document.querySelector('#indicator > li.active').className = '';
+    //             document.querySelector('#indicator > li:nth-child(' + (this.currPageX + 1) + ')').className = 'active';
+    //         }
+    //     });
+    // }
+    // document.addEventListener('DOMContentLoaded', loaded, false);
+
+    var myScroll;
+
+function loaded() {
+myScroll = new iScroll('wrapper', {
+snap: true,
+momentum: false,
+hScrollbar: false,
+onScrollEnd: function () {
+document.querySelector('#indicator > li.active').className = '';
+document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+}
+ });
+}
+document.addEventListener('DOMContentLoaded', loaded, false);
+
+
+    render_category();
+
+    function render_category(){
+
+        $.get('/api/v1/social/workcategory/',
+            function(res){
+                // var log = $('#nav').attr(data);
+                console.log(res);
+                html = '';
+                $.each(res.results, function(i,e){
+                    // html += '<li class="category_li"><a id="'+e.id+'" >'+e.name+'</a></li>'
+                    href = './work.html?type_id='+e.id;
+                    html += '<a href="'+href+'" data-role="none"><div class="img" style="background:url(./resource/'+(i+1)+'.png) center no-repeat; background-size:contain;"></div>'
+                    html += '<div class="text">'+e.name+'</div></a>'
+                })
+                $(".content").append(html)
+
+                
+            }
+        )
+
+    }
+
+</script>
+</head>
+
+<body>
+<header>
+    <div class="banner">
+        <div id="wrapper" style="overflow: hidden; ">
+            <div id="scroller" style="width: 12664px; -webkit-transition: -webkit-transform 0ms; transition: -webkit-transform 0ms; -webkit-transform-origin: 0px 0px; -webkit-transform: translate3d(-3166px, 0px, 0px) scale(1);">
+         <!--    <div id="scroller"> -->
+                <ul id="thelist">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="nav">
+        <div id="prev" onclick="myScroll.scrollToPage('prev', 0,400,2);return false"> </div>
+        <ul id="indicator">
+            <li class="">1</li> 
+            <li class="">2</li> 
+            <li class="active">3</li> 
+            <li>4</li> 
+            <li>5</li> 
+            <li>6</li> 
+            <li>7</li> 
+            <li>8</li>        
+        </ul>
+        <div id="next" onclick="myScroll.scrollToPage('next', 0);return false"></div>
+    </div>
+    <div class="clr"></div>
+</header>
+<script>
+
+
+    function render_advertise(){
+        $.get('/api/v1/social/adv/?type=1',
+            function(res){
+                console.log(res);
+                html = '';
+                $.each(res.results, function(i,e){
+                    html+= '<li><p></p><a href="'+e.content+'"><img src="'+e.cover+'" /></a></li>'
+                })
+                $("#thelist").append(html)
+                scrolls();
+            }
+        )
+
+    }
+    render_advertise();
+
+    // function scrolls(){
+
+
+    //     var count = document.getElementById("thelist").getElementsByTagName("img").length;
+    //     for (i = 0; i < count; i++) {
+    //         document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:" + document.body.clientWidth + "px";
+    //     }
+    //     document.getElementById("scroller").style.cssText = " width:" + document.body.clientWidth * count + "px";
+    //     setInterval(function() {
+    //         myScroll.scrollToPage('next', 0, 400, count);
+    //         console.log('ss');
+    //     }, 3500);
+    //     window.onresize = function() {
+    //         for (i = 0; i < count; i++) {
+    //             document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:" + document.body.clientWidth + "px";
+    //         }
+    //         document.getElementById("scroller").style.cssText = " width:" + document.body.clientWidth * count + "px";
+    //     };
+
+    // }
+        function scrolls(){
+
+        var count = document.getElementById("thelist").getElementsByTagName("img").length;  
+
+
+        for(i=0;i<count;i++){
+         document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+
+        }
+
+        document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+
+
+         setInterval(function(){
+        myScroll.scrollToPage('next', 0,400,count);
+        },3500 );
+
+        window.onresize = function(){ 
+        for(i=0;i<count;i++){
+        document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+
+        }
+
+         document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+        } 
+
+
+    }
+
+
+</script>
+<div class="content">
+<!--     <a href="index.php@g=Wap&m=Index&a=content&token=baibai&id=137&pid=4&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(./resource/13809673822754.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">关于我们</div>
+    </a><a href="index.php@g=Wap&m=Index&a=lists&classid=302&token=baibai&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(./resource/13809673974739.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">设计团队</div>
+    </a><a href="index.php@g=Wap&m=Index&a=lists&classid=303&token=baibai&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(./resource/13809674157426.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">经典案例</div>
+    </a><a href="index.php@g=Wap&m=Index&a=content&token=baibai&id=144&pid=4&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(./resource/13809674319154.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">服务保障</div>
+    </a><a href="index.php@g=Wap&m=Index&a=content&token=baibai&id=145&pid=4&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(./resource/13809674461949.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">优惠活动</div>
+    </a><a href="index.php@g=Wap&m=Index&a=content&token=baibai&id=146&pid=4&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(./resource/13809674651404.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">装饰课堂</div>
+    </a><a href="index.php@g=Wap&m=Index&a=lists&classid=307&token=baibai&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(./resource/13809674805918.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">会员中心</div>
+    </a>
+
+    <a href="index.php@g=Wap&m=Index&a=content&token=baibai&id=147&pid=4&wecha_id=o0LVquEUQZAJWEkbfRgk47XcQIUk&loveU=mp.weixin.qq.com" data-role="none">
+        <div class="img" style="background:url(./resource/13809674974016.png) center no-repeat; background-size:contain;"></div>
+        <div class="text">联系我们</div>
+    </a>
+ -->
+</div>
+
+
+<div class="footer">
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html><head>
+<meta charset="UTF-8">
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<script type="text/javascript" src="/static/js/jquery-1.8.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/default2.css">
+<title>指尖南信</title>
+<style>
+*{margin:0; padding:0;}
+body,html{height:anto; width:100%;margin-bottom:51px;}
+.transp{position:absolute;background-color:#999; opacity: 0.45;-moz-opacity: 0.45;filter:alpha(opacity=45); width:100%; height:100%}
+.loading{position:absolute;backgroud-color:#ECECFF;top:50%; left:50%;margin-left:-17px;margin-top:-17px;width:35px; height:35px;}
+.the_form_submit{width:100%; background: #e84c3d; border:0 none; padding:10px 0px; font:15px 'Microsoft YaHei', "hiragino sans gb",'黑体','宋体', Arial, Lucida Grande, Tahoma, sans-serif; cursor:pointer; color:#FFF; margin-top:10px;}
+</style>
+
+</head>
+	<body>
+		<div>
+			<img style="width:100%" src="http://chaoran.u.qiniudn.com/library1.png?imageView2/2/w/480/h/400">
+		</div>
+		<div id="page" style="position:relative">
+			<article>
+			    <div id="j-goods-container">   
+			    	<input type='text' placeholder="   输入书名" style="width:100%;margin-top:100px;padding:10px 0px;" class="input-name">
+			    	<input type="button" name="car_num" id="submit" class="the_form_submit" value="查询" />
+				</div>   
+			</article> 
+		</div>
+<!-- 		<div >
+			<img style="margin-top:50px;margin-left:30%" src="http://chaoran.u.qiniudn.com/zhijiannanxin.jpg?imageView2/2/w/150/h/150">
+			<div style="margin-top:10px;margin-left:28%;">欢迎关注指尖南信公众平台</div>
+		</div> -->
+	</body>
+
+
+
+<script type="text/javascript">
+	$("#submit").click(function(){
+		var text = $('.input-name').val()
+		window.location.href = './library.html?text='+text;
+	})
+	
+
+</script>
+</html>

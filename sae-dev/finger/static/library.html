@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html><head>
+<meta charset="UTF-8">
+<title>指尖南信</title>
+</head><body>
+<div class="wrap">
+<div class="cloudcenter">
+
+
+<html>
+<head>
+<script type="text/javascript" src="./js/jquery-1.8.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./default2.css">
+<script>
+	var text = ''
+	var url=window.location.toString();
+    var str="";
+    if(url.indexOf("?")!=-1){
+        var ary=url.split("?")[1].split("&");
+        for(var i in ary){
+            str=ary[i].split("=")[0];
+            if (str == "text") {
+                text = decodeURI(ary[i].split("=")[1]);
+            }
+        }
+    }
+	$.get('/api/v1/campus/search/?text='+text, function(res){
+		console.log(res);
+		render_work(res)
+	})
+
+	function render_work(data){
+		$('#j-goods-container').html('');
+		results = data.results;
+		html = ''
+		console.log(data);
+		if(results.length==0){
+			info = '亲，没有你想要的书籍 《'+text+'》'
+			// alert(')
+			alert(info)
+		}
+		else{
+			$.each(results, function(i,e){
+				html += '<section class="w-goods" ><a  style="padding: 7px 8px;" href="'
+				html += './book-detail.html?marc_no='+e[0]+'">'
+				html += '<div><p>'+e[1]+'</p><div>'
+				html += '</a></section>'
+
+
+				// html += '<section class="w-goods"><a href="'
+				// html += './work_detail.html?id='+e.id
+				// html +='"><div class="img-wrapper"><p><img alt="" data-pinit="registered" src="'
+				// html += e.cover+'?imageView2/0/w/118/h/79/'
+				// html +='" style="width: 300px; height: 167px;" /> </p></div>'
+				// html += '<ul><li class="title"><span class="item-name">'
+				// html += e.name
+				// html += '</span></li>'
+				// html += '<li class="info"> <span class="site-name">公司：<ins>'
+				// html += e.company_name 
+				// html += '</ins></span></li>'
+				// html += '<li class="others">薪酬: <span>'
+				// html += e.price
+				// html += '</span></li>'
+				// html += '<li class="others">工作地点: <span>'
+				// html += e.area
+				// html += '</span></li></ul></a></section>'
+				// console.log(html)
+
+			})
+		}
+
+		$('#j-goods-container').html(html);
+
+	}
+
+</script>
+
+
+<style>
+*{margin:0; padding:0;}
+body,html{height:anto; width:100%;margin-bottom:51px;}
+.transp{position:absolute;background-color:#999; opacity: 0.45;-moz-opacity: 0.45;filter:alpha(opacity=45); width:100%; height:100%}
+.loading{position:absolute;backgroud-color:#ECECFF;top:50%; left:50%;margin-left:-17px;margin-top:-17px;width:35px; height:35px;}
+</style>
+
+<style>//footer.css
+	
+
+</style>
+
+<meta charset="utf-8">
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/static/mobile/global/logo.png">
+<meta name="description" content="团购,每日推荐最优质、省钱、放心的团购商品。团购——最权威的团购导航。">
+<meta name="keywords" content="团购网站大全,团购网站,团购导航,团购大全">
+<title>指尖南信</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<a name="top" id="top"></a>
+<div>
+<img style="width:100%" src="http://chaoran.u.qiniudn.com/library1.png?imageView2/2/w/480/h/400">
+</div>
+<div id="page" style="position:relative">
+	<article>
+
+	    <div id="j-goods-container">   
+			  <div style="margin-top:30px;">正在查找您的搜索，请等待...</div>
+		</div>   
+	</article> 
+</div>
+
+         <ul class="reg-list-2col row"><li></li></ul> 
+         <ul class="reg-list-2col row"><li></li></ul> 
+         
+         <ul class="reg-list-2col row"><li></li></ul> 
+         <ul class="reg-list-2col row"><li></li></ul> 
+         <ul class="reg-list-2col row"><li></li></ul>
+   
+
+</body></html>
+</div></div></body></html>
